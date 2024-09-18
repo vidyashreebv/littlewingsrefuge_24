@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /* Styles from the original code */
+        /* Main menu */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-nav {
+            display: flex;
+        }
+
+        /* Main menu links */
+        .header-nav a {
+            margin-right: 10px;
+            padding: 5px 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #2d545e;
+            border-radius: 5px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #d99030;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #985503db;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        section {
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #1c1b19;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #985503db;
+            color: #fff;
+        }
+
+        /* New styles for the admission form */
+        form {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #1c1b19;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #2d545e;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1f3a41;
+        }
+    </style>
+</head>
+
+<body style="background-color: #C89666;">
+    <div class="header-container">
+        <a href="index.html"><img src="logo.png" alt="" srcset="" width="100" height="100"></a>
+        <nav class="header-nav">
+            <a href="aboutus.html">About Us</a>
+            <a href="donate.html">Donate</a>
+            <a href="adopt.html">Adopt a Child</a>
+            <a href="joinus.html">Join Us</a>
+            <a href="joinkid.html">Join a Kid</a>
+            <a href="loginPageHTML.html">Login</a>
+        </nav>
+    </div>
+
+    <header>
+        <h1>Admit Children in need to Little Wings Refuge</h1>
+        <p>Make a lasting impact. Give these children a loving home.</p>
+    </header>
+
+    <main>
+        <p>Little Wings Refuge is committed to providing a safe and nurturing environment for orphaned children. If you
+            are interested in admitting a child or want to learn more about the process, please fill out the form below:
+        </p>
+
+        <form>
+            <label for="name">Your Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Your Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Additional Information (optional):</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Submit Admission Request</button>
+        </form>
+
+        <h2>Why Choose Little Wings Refuge?</h2>
+        <ul>
+            <li>Compassionate and experienced staff</li>
+            <li>Safe and loving homes for every child</li>
+            <li>Holistic support for the well-being of the child</li>
+        </ul>
+
+        <p>Read more about us: <a href="aboutus.html">About Little Wings Refuge</a></p>
+        <p>Have questions? <a href="contact.html">Contact us</a>.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Little Wings Refuge</p>
+    </footer>
+</body>
+
+</html>

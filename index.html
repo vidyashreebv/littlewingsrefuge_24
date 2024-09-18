@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <title>Little Wings Refuge</title>
+  <style>
+    /* Main menu */
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-nav {
+      display: flex;
+    }
+
+    /* Main menu links */
+    .header-nav a {
+      margin-right: 10px;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: white;
+      background-color: #2d545e;
+      border-radius: 5px;
+    }
+
+    /* Image container */
+    .main-image-container {
+      background-image: url("mainimage1.png");
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 800px;
+      position: relative;
+      text-align: center;
+    }
+
+    /* Text on image */
+    .image-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 60px;
+      font-family: "Orbitron", cursive;
+      letter-spacing: 0.3em;
+      color: white;
+      white-space: nowrap;
+    }
+
+    /* About Us section */
+    .about-us {
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 0em;
+      padding-bottom: 0em;
+      color: #2d545e;
+    }
+
+    .about-us-container {
+      text-align: justify;
+      padding: 30px;
+      font-size: 15px;
+      margin: 0;
+      font-style: "Raleway";
+    }
+
+    .about-us-container p {
+      margin: 0;
+    }
+
+    /* Address/map section */
+    .address-header {
+      text-align: center;
+      padding: 20px;
+      margin-top: 0em;
+      padding-top: 0em;
+      padding-bottom: 0em;
+      color: #2d545e;
+    }
+
+    .address-container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .map {
+      width: 100%;
+      height: 400px;
+    }
+
+    /* Footer section */
+    .footer {
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10cm;
+      margin-right: auto;
+      width: 50%;
+    }
+
+    .social-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .social-link {
+      margin-right: 10px;
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+    }
+
+    .fundraising-events {
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .fundraising-event {
+      margin-bottom: 10px;
+    }
+
+    .fundraising-event-title {
+      font-weight: bold;
+    }
+
+    .fundraising-event-description {
+      margin-bottom: 5px;
+    }
+
+    .fundraising-event-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .column {
+      margin-bottom: 20px;
+      flex: 1 0 33.33%;
+    }
+
+    .column img {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body style="background-color: #C89666;">
+  <!-- Main menu and logo -->
+  <div class="header-container">
+    <a href="index.html"><img src="logo.png" alt="" srcset="" width="100" height="100"></a>
+    <nav class="header-nav">
+      <a href="aboutus.html">About Us</a>
+      <a href="donate.html">Donate</a>
+      <a href="adopt.html">Adopt a Child</a>
+      <a href="joinus.html">Join Us</a>
+      <a href="joinkid.html">Join a Kid</a>
+      <a href="loginPageHTML.html">Login</a>
+    </nav>
+  </div>
+  <!-- Orphanage's title -->
+  <div class="main-image-container">
+    <p class="image-text">Little Wings Refuge</p>
+  </div>
+  <br>
+  <!-- Our purpose section -->
+  <div>
+    <h2 class="about-us">Our Purpose</h2>
+    <p class="about-us-container">At Little Wings Refuge, our mission is to provide a safe haven for orphaned and
+      vulnerable children, where they can find love, care, and support in a nurturing environment. We believe that every
+      child deserves a chance to thrive and reach their full potential, regardless of their circumstances. Through our
+      dedicated staff, comprehensive programs, and community partnerships, we offer holistic care that addresses the
+      physical, emotional, and educational needs of each child under our care. From ensuring access to quality education
+      and healthcare to facilitating loving adoptions, we are committed to empowering children to build brighter
+      futures. Our goal is not only to provide temporary shelter but to create lasting positive change in the lives of
+      every child who walks through our doors. Join us in making a difference and giving these children the wings they
+      need to soar.</p>
+  </div>
+
+  <div class="fundraising-events">
+    <h2 class="about-us">Fundraising Events</h2>
+
+    <h4 class="about-us">Upcoming Event: Charity Fun Run</h4>
+    <p class="about-us-container" style="text-align: center;">Join us for a fun run to raise money for our children's
+      education program.<br>
+      [Date of event] <br>
+      Time: [Time of event] <br>
+      Location: [Location of event] <br>
+      Register now: [Link to registration page]</p>
+
+    <h4 class="about-us">Past Events</h2>
+      <br>
+      <div class="row">
+        <div class="column">
+          <img src="fe3.jpg" alt="Fundraising Event 1 Image" width="450">
+          <p class="about-us-container">Bake Sale Bonanza<br><br>On [Date of event], we held a bake sale fundraiser that
+            raised [amount raised]! Thank you to everyone who participated and helped support our children.</p>
+        </div>
+
+        <div class="column">
+          <img src="fe2.jpg" alt="Fundraising Event 2 Image" width="450">
+          <p class="about-us-container">Talent Show Extravaganza
+            <br><br>On [Date of event], our talented children showcased their abilities at a fundraising talent show! We
+            raised [amount raised] to support our arts programs. Thank you to all the performers and attendees!
+          </p>
+        </div>
+
+        <div class="column">
+          <img src="fe1.jpg" alt="Fundraising Event 3 Image" width="450">
+          <p class="about-us-container">Bookfair Bonanza<br><br>On [Date of event], we hosted a bookfair fundraiser with
+            donated books. It was a huge success, raising [amount raised] for our literacy programs! Thank you to
+            everyone who donated and participated.</p>
+        </div>
+      </div>
+  </div>
+  <!-- Address/map section -->
+  <div class="address-container">
+    <h2 class="address-header">Visit Us</h2>
+    <p>123 Orphanage Street, City, Country</p>
+    <iframe class="map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.599588474179!2d-73.99444338458946!3d40.72986197932813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bd0849d50f%3A0x8d8766fe83ee7d6c!2sCentral%20Park!5e0!3m2!1sen!2sus!4v1637790242425!5m2!1sen!2sus"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  <!-- Footer section -->
+  <div class="footer">
+    <div class="footer-logo">
+      <img src="logo.png" alt="Logo" width="100" height="100">
+    </div>
+    <div class="social-links">
+      <a href="#" class="social-link">Instagram</a>
+      <a href="#" class="social-link">Facebook</a>
+      <a href="#" class="social-link">Twitter</a>
+    </div>
+  </div>

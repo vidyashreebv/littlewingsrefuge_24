@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orphanage Donation Page</title>
+  <style>
+   /* Main menu */
+   .header-container { 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        } 
+        .header-nav {
+            display: flex;
+        }
+        /* Main menu links */
+        .header-nav a {
+            margin-right: 10px;
+            padding: 5px 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #2d545e;
+            border-radius: 5px;
+        }
+    /* body {
+      font-family: 'Orbitron', sans-serif;
+      background-image: url('donate.jpg'); 
+      background-size: cover;
+      background-position: center;
+      background-color: #c89666;
+      text-align: center;
+      margin: 50px;
+    } */
+
+    h1 {
+      color: #333;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      background-color: #e1b382(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(230, 24, 24, 0.1);
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    input {
+      width: calc(100% - 16px);
+      padding: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #2d545e;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body style="background-color: #C89666;">
+    <!-- Main menu and logo -->
+    <div class="header-container">
+      <a href="index.html"><img src="logo.png" alt="" srcset="" width="100" height="100"></a>
+      <nav class="header-nav">
+        <a href="aboutus.html">About Us</a>
+        <a href="donate.html">Donate</a>
+        <a href="adopt.html">Adopt a Child</a>
+        <a href="joinus.html">Join Us</a>
+        <a href="joinkid.html">Join a Kid</a>
+        <a href="loginPageHTML.html">Login</a>
+      </nav>
+  </div>
+  <br>
+
+  <h2 style="text-align: center;">SUPPORT US</h2>
+
+  <form id="donationForm">
+    <label for="amount">Donation Amount</label>
+    <input type="number" id="amount" name="amount" required>
+
+    <label for="cardNumber">Credit Card Number</label>
+    <input type="text" id="cardNumber" name="cardNumber" required>
+
+    <label for="expiryDate">Expiry Date</label>
+    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+
+    <label for="cvv">CVV</label>
+    <input type="text" id="cvv" name="cvv" required>
+
+    <button type="button" onclick="processDonation()">Donate</button>
+  </form>
+
+  <script>
+    function processDonation() {
+      // Fetch form data
+      const amount = document.getElementById('amount').value;
+      const cardNumber = document.getElementById('cardNumber').value;
+      const expiryDate = document.getElementById('expiryDate').value;
+      const cvv = document.getElementById('cvv').value;
+
+      // Validate data (you should perform more thorough validation)
+      if (!amount || !cardNumber || !expiryDate || !cvv) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      // Send data to the server for processing (server-side code required)
+      // Example: Use AJAX to send data to a server endpoint
+
+      // For simplicity, display a success message
+      alert(`Thank you for your donation of ${amount}!`);
+
+      // Clear the form
+      document.getElementById('donationForm').reset();
+    }
+  </script>
+
+</body>
+</html>

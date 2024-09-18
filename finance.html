@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Management</title>
+  <style>
+    header {
+      background-color: #C89666;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #fff;
+      margin-bottom: 0;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #C89666;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .sidebar a:hover {
+      background-color: #ddd;
+      color: #222;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      background-color: #F5F5F5;
+      /* Light background for main content */
+    }
+
+    main {
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    body {
+      font-family: serif;
+      background-color: #C89666;
+      /* Adjust background color if needed */
+      color: #2d545e;
+    }
+
+    .finance-module {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 5px;
+      width: 81%;
+    }
+
+    h1 {
+      color: #fff;
+      /* White heading */
+      margin-bottom: 0;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      /* Subtle border */
+      border-radius: 5px;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    label {
+      width: 80px;
+      text-align: right;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+    }
+
+    textarea {
+      height: 80px;
+    }
+
+    button {
+      background-color: #C89666;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f9f9f9;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Navigation</h2>
+      <a href="#">Staff Management</a>
+      <ul>
+        <li><a href="Staff Salary and Roles.html">1. Staff Salary, Roles & Responsibilities</a></li>
+        <li><a href="StaffAttendance.html">2. Attendance Management</a></li>
+        <li><a href="StaffRegistration.html">3. New Staff Registration</a></li>
+        <li><a href="StaffDetails.html">4. Staff Details</a></li>
+      </ul>
+      <a href="#">Children</a>
+      <ul>
+        <li><a href="childinfo.html">5. Child Information</a></li>
+      </ul>
+      <a href="#">Volunteers</a>
+      <ul>
+        <li><a href="volunteermanagement.html">6. Volunteer Management</a></li>
+      </ul>
+      <a href="#">Finance</a>
+      <ul>
+        <li><a href="finance.html">7. Expense Tracking</a></li>
+      </ul>
+    </div>
+    <div class="finance-module">
+      <header>
+        <h1>Expense Tracker</h1>
+      </header>
+      <main>
+        <section class="add-expense">
+          <h2>Add Expense</h2>
+          <form id="Finance"> <label for="date">Date:</label>
+            <input id="date" name="date" type="date">
+            <label for="category">Category:</label>
+            <select id="category" name="category">
+              <option value="food">Food</option>
+              <option value="medical">Medical</option>
+              <option value="education">Education</option>
+              <option value="utilities">Utilities</option>
+              <option value="other">Other</option>
+            </select>
+            <label for="amount">Amount:</label>
+            <input id="amount" name="amount">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea>
+            <button type="submit">Add Expense</button>
+          </form>
+        </section>
+        <section class="expense-list">
+          <h2>Recent Expenses</h2>
+          <table id="expenses-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-database.js"></script>
+    <script src="forfinance.js"></script>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+a0 = 1
+a1 = 1
+seq = [a0,a1]
+for n in range(2,6):
+    a_n = n*seq[n-1] + n**2*seq[n-2]
+    seq.append(a_n)
+print(seq)
+
+import sympy as sp
+x = sp.Symbol('x')
+expr = (x**7 + x**8 + x**9 + x**10)**5
+expr1 = sp.expand(expr)
+coeff_x2 = expr1.coeff(x**37)
+print(coeff_x2)

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Management</title>
+  <style>
+    header {
+      background-color: #C89666;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #fff;
+      margin-bottom: 0;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #C89666;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .sidebar a:hover {
+      background-color: #ddd;
+      color: #222;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      background-color: #F5F5F5;
+      /* Light background for main content */
+    }
+
+    main {
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    body {
+      font-family: serif;
+      background-color: #C89666;
+      /* Adjust background color if needed */
+      color: #2d545e;
+    }
+
+    .volunteer-management-module {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 5px;
+      width: 81%;
+    }
+
+    .volunteers-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .volunteers-list li {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .volunteers-list li a {
+      text-decoration: none;
+      color: #2d545e;
+    }
+
+    #volunteer-details-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Semi-transparent overlay */
+      display: none;
+      /* Initially hidden */
+    }
+
+    .details-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .close-button {
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    .close-button a {
+      text-decoration: none;
+      color: #2d545e;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Navigation</h2>
+      <a href="#">Staff Management</a>
+      <ul>
+        <li><a href="Staff Salary and Roles.html">1. Staff Salary, Roles & Responsibilities</a></li>
+        <li><a href="StaffAttendance.html">2. Attendance Management</a></li>
+        <li><a href="StaffRegistration.html">3. New Staff Registration</a></li>
+        <li><a href="StaffDetails.html">4. Staff Details</a></li>
+      </ul>
+      <a href="#">Children</a>
+      <ul>
+        <li><a href="childinfo.html">5. Child Information</a></li>
+      </ul>
+      <a href="#">Volunteers</a>
+      <ul>
+        <li><a href="volunteermanagement.html">6. Volunteer Management</a></li>
+      </ul>
+      <a href="#">Finance</a>
+      <ul>
+        <li><a href="finance.html">7. Expense Tracking</a></li>
+      </ul>
+    </div>
+    <div class="volunteer-management-module">
+      <main>
+        <h2>Volunteers</h2>
+        <ul class="volunteers-list">
+          <li>
+            <a href="#" data-volunteer-id="1">John Doe</a>
+          </li>
+        </ul>
+      </main>
+      <div id="volunteer-details-overlay">
+        <div class="details-container">
+          <h2>Volunteer Details</h2>
+          <p>Name: [Volunteer Name]</p>
+          <p>Mobile: [Volunteer Mobile Number]</p>
+          <p>Address: [Volunteer Address]</p>
+          <p>Roles and Responsibilities: [Volunteer Roles and Responsibilities]</p>
+          <div class="close-button">
+            <a href="volunteermanagement.html">Close</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const volunteerLinks = document.querySelectorAll('.volunteers-list a');
+
+      volunteerLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          const detailsOverlay = document.getElementById('volunteer-details-overlay');
+          detailsOverlay.style.display = 'block'; // Show the overlay
+        });
+      });
+    </script>
+  </div>
+</body>
+
+</html>

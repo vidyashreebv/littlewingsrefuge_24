@@ -1,0 +1,27 @@
+from sympy import *
+x,y,z=symbols("x,y,z")
+def u_giv(u):
+ux=diff(u,x)
+print("ux=", ux)
+uy=diff(u,y)
+print("uy=", uy)
+fp=simplify(ux-1j*uy)
+print("f'(x,y)=", str(fp))
+g=fp.subs({x:z,y:0})
+print("f' (z,0)="g)
+f=integrate(g, z)
+return("f="+str(f))
+def v_giv(v):
+vx=diff(v,x)
+print("vx=", vx)
+vy=diff(v,y)
+print("vy=",vy)
+fp=vy+1j*vx
+print("f'(x,y)=", str(fp))
+g=fp.subs({x:z,y:0})
+print("f' (z, 0) =",g)
+f=integrate (g, z)
+return("f="+str(f))
+pprint(u_giv(sp.exp(x)*(x*sp.cos(y)-y*sp.sin(y))))
+print()
+pprint(v_giv(1j*sp.exp(x)*(x*sp.cos(y)-y*sp.sin(y))))

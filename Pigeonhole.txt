@@ -1,0 +1,74 @@
+from matplotlib.pyplot import *
+from matplotlib_venn import *
+not_playing = B + T + C - BC - CT - BT + BTC
+venn3((B,T,BT,C,BC,CT,BTC),set_labels=('Baketball','Throwball','Cricket'))
+venn3_circles((B,T,BT,C,BC,CT,BTC), linestyle = "--")
+None
+
+#list of 101 integers, each between 1 and 100, find the integer that appears more than once
+from numpy.random import randint
+arr = list(randint(1,101,101))
+print(f"{arr = }")
+for pos, i in enumerate(arr):
+    try:
+        val_pos = arr.index(i,pos+1)
+    except ValueError:
+        continue
+    else:
+        print(f"{i = } found at {pos = } and {val_pos = }")
+
+#list of 7 integers, each between 1 and 10, find two integers whose difference is divisible by 3
+from numpy.random import randint
+arr = list(randint(1,11,7))
+print(f"{arr = }")
+values = set()
+for pos, i in enumerate(arr):
+    for j in arr[pos:]:
+        if (i-j) % 3 == 0:
+            values.add((i,j))
+values
+
+#list of 100 integers, each between 1 and 101, find the largest subset of integers whose sum is divisible by 101
+from numpy.random import randint
+from itertools import combinations
+arr = list(randint(1,102,100))
+print(f"{arr = }")
+breakbool = False
+for k in range(101,0,-1):
+    comb = combinations(arr,k)
+    for j in comb:
+        if sum(j)%101 == 0:
+            breakbool = True
+            break
+    if breakbool:
+        break
+print(f"{len(j) = }")
+print(f"{j = }")
+
+#These are 100 students in a class. Each student can speak almost 3 languages. Prove that there must be atleast 10 students in the class who can sopeak the same set of 3 languages.
+from itertools import combinations
+num_students = 100
+lang_list = {f"lang{i}" for i in range(1,10)}
+#print(lang_list)
+#Assume every student speaks 3 languages of the available languages.
+pigeon_holes = len(list(combinations(lang_list, 3)))
+print(f"{num_students = }")
+print(f"{pigeon_holes = }")
+if num_students > 10*pigeon_holes:
+    print("By pigeon hole principle, there are at least 10 students speaking the same set of 3 languages")
+else:
+    print("By pigeon hole principle, there are not at least 10 students speaking the same set of 3 languages")
+
+#Let n be a positive integer, show that among any n+1 positive integer, there must be two integers whose difference is divisible by n.
+n = int(input("Enter value for n : "))
+print("Entered value for n : ",n)
+print(f"By division algorithm, anu number can be represented by q X {n} + r")
+r_set = set()
+for i in range(1,200):
+    r_set.add(i%n)
+print(f"The unique r available is {r_set}, and the number of them is {len(r_set)}")
+if n+1 > len(r_set):
+    print(f"Since the number of selected elements is more than the number of unique r, there exists two integers whose difference is divisible by n.")
+else:
+    print(f"Since the number of selected elements is less than the number of unique r, there does not exist two integers whose difference is divisible by n.")
+print("This is by pigeon-hole principle, where the numbers are the pigeons and the unique r are the pigeonholes.")

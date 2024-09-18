@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organization Management System</title>
+  <style>
+    body {
+      font-family: serif;
+      background-color: #F5F5F5;
+      color: #2d545e;
+    }
+
+    header {
+      background-color: #C89666;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #fff;
+      margin-bottom: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #C89666;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .sidebar a:hover {
+      background-color: #ddd;
+      color: #222;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    main {
+      padding: 0;
+    }
+
+    section {
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    label {
+      width: 80px;
+      text-align: right;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+    }
+
+    textarea {
+      height: 80px;
+    }
+
+    button {
+      background-color: #C89666;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="sidebar">
+        <h2>Navigation</h2>
+        <a href="#">Staff Management</a>
+        <ul>
+          <li><a href="#">1. Staff Salary, Roles & Responsibilities</a></li>
+          <li><a href="#">2. Attendance Management</a></li>
+          <li><a href="#">3. New Staff Registration</a></li>
+          <li><a href="#">4. Staff Details</a></li>
+        </ul>
+        <a href="#">Children</a>
+        <ul>
+          <li><a href="#">5. Child Information</a></li>
+        </ul>
+        <a href="#">Volunteers</a>
+        <ul>
+          <li><a href="#">6. Volunteer Management</a></li>
+        </ul>
+        <a href="#">Finance</a>
+        <ul>
+          <li><a href="#">7. Expense Tracking</a></li>
+        </ul>
+      </div>
+      <div class="main-content">
+        </div>
+    </div>
+  </main
